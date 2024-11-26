@@ -5,10 +5,6 @@ mh2
 mh1
 mh2
 
-[prod]
-mh3
-mh4
-mh5
 
 [test:children]
 dev
