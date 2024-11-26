@@ -12,3 +12,8 @@
                   name: httpd.service
                   state: started
                   enabled: yes
+
+           - name: copy web-content to mh
+             copy:
+                   src: ./index.html
+                   dest: /var/www/html
