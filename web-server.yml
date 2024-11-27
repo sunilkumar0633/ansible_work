@@ -1,15 +1,17 @@
 ---
  - name: configure web-server
    hosts: dev
+   vars_files:
+              - ./vars.txt
    tasks:
-           - name: install httpd
+           - name: install {{ package }}
              yum: 
-                  name: httpd
+                  name: "{{ package }}"
                   state: present
 
            - name: start & enable httpd.service
              service:
-                  name: httpd.service
+                  name: "{ service}}"
                   state: started
                   enabled: yes
 
